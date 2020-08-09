@@ -1,4 +1,4 @@
-# PopStompbox
+# StomPop
 
 **Hey ! Welcome to this DIY Stompbox project.**
 
@@ -12,11 +12,11 @@ If you are in, follow me !
 
 ## Table of contents
 
-1. [Main features](https://github.com/St4ckben/PopStompbox/blob/master/README.md#1-main-features)
-2. [Well, what does the PopStompbox look like ?](https://github.com/St4ckben/PopStompbox/blob/master/README.md#2-well-what-does-the-popstompbox-look-like-)
-3. [Basic usage](https://github.com/St4ckben/PopStompbox/blob/master/README.md#3-basic-usage)
-4. [How to change the onboarded sounds ?](https://github.com/St4ckben/PopStompbox/blob/master/README.md#4-how-to-change-the-onboarded-sounds-)
-5. [How to build PopStompbox ?](https://github.com/St4ckben/PopStompbox/blob/master/README.md#5-how-to-build-popstompbox-)
+1. [Main features](https://github.com/St4ckben/StomPop/blob/master/README.md#1-main-features)
+2. [Well, what does the StomPop look like ?](https://github.com/St4ckben/StomPop/blob/master/README.md#2-well-what-does-the-stompop-look-like-)
+3. [Basic usage](https://github.com/St4ckben/StomPop/blob/master/README.md#3-basic-usage)
+4. [How to change the onboarded sounds ?](https://github.com/St4ckben/StomPop/blob/master/README.md#4-how-to-change-the-onboarded-sounds-)
+5. [How to build StomPop ?](https://github.com/St4ckben/StomPop/blob/master/README.md#5-how-to-build-stompop-)
 
 ## 1. Main features
 
@@ -26,35 +26,35 @@ If you are in, follow me !
 - Input 6.35mm jack for optional guitar pluging
 - Support of mono 8-bits 32000 Hz (best results achieved with 22050 Hz)
 
-## 2. Well, what does the PopStompbox look like ?
+## 2. Well, what does the StomPop look like ?
 
 ## 3. Basic usage
 
 ### Active or passive mode
 
-PopStompbox can be used in several ways.
+StomPop can be used in several ways.
 
-The easiest way to use PopStombox is in passive mode. In such unpowered mode, the stompbox only needs do be plugged to an amplifier and that's it. 
+The easiest way to use StomPop is in passive mode. In such unpowered mode, the stompbox only needs do be plugged to an amplifier and that's it. 
 It consists in a piezoelectric microphone connected to the output jack as shown below (simplified scheme). The produced sound is the amplified sound of the foot hitting the wood box.
 
-<img src="https://raw.githubusercontent.com/St4ckben/PopStompbox/master/resources/passive_mode.png" width="500" title="Passive mode">
+<img src="https://raw.githubusercontent.com/St4ckben/StomPop/master/resources/passive_mode.png" width="500" title="Passive mode">
 
 The active mode, one the other hand, requires a 9V battery to work. Instead of hearing an amplified wooden sound, the piezoelectric microphone is only used as a sensor and the arduino is producing a numeric sound from a mono 8-bit wav file. 
 
-<img src="https://raw.githubusercontent.com/St4ckben/PopStompbox/master/resources/active_mode.png" width="500" title="Active mode">
+<img src="https://raw.githubusercontent.com/St4ckben/StomPop/master/resources/active_mode.png" width="500" title="Active mode">
 
-**Switching from passive mode to active mode is done easily by powering on the PopStompbox.**
+**Switching from passive mode to active mode is done easily by powering on the StomPop.**
 An internal relay is diverting the electrical circuit towards the arduino microcontroller.
 
 ### How to plug my guitar and my amp ? 
 
 If the amplifier is equiped with several inputs, the guitar and the stompbox can be both plugged directly onto the amplifier as shown below.
 
-<img src="https://raw.githubusercontent.com/St4ckben/PopStompbox/master/resources/parallel_plugging.png" width="450" title="Parallel plugging">
+<img src="https://raw.githubusercontent.com/St4ckben/StomPop/master/resources/parallel_plugging.png" width="450" title="Parallel plugging">
 
 As the stompbox is equiped with an input 6.35mm jack, it is also possible to plug the guitar, the stompbox and the amp in series as shown below. The main advantage of this solution is that only one input is required on the amplifier. 
 
-<img src="https://raw.githubusercontent.com/St4ckben/PopStompbox/master/resources/series_plugging.png" width="450" title="In-series plugging">
+<img src="https://raw.githubusercontent.com/St4ckben/StomPop/master/resources/series_plugging.png" width="450" title="In-series plugging">
 
 ## 4. How to change the onboarded sounds ?
 
@@ -70,7 +70,7 @@ As the stompbox is equiped with an input 6.35mm jack, it is also possible to plu
 8. Close the stompbox case.
 9. Enjoy !
 
-## 5. How to build PopStompbox ?
+## 5. How to build StomPop ?
 
 ### You will need...
 
@@ -104,4 +104,4 @@ This is the shop list of what I used, for some of them, they can be replaced by 
 
 ### Electronical wiring layout
 
-![Electronic circuit](https://raw.githubusercontent.com/St4ckben/PopStompbox/master/resources/electronics.PNG)
+![Electronic circuit](https://raw.githubusercontent.com/St4ckben/StomPop/master/resources/electronics.PNG)
