@@ -13,10 +13,10 @@ If you are in, follow me !
 ## Table of contents
 
 1. [Main features](https://github.com/St4ckben/PopStompbox/blob/master/README.md#1-main-features)
-2. [Well, what does the PopStompbox look like ?](https://github.com/St4ckben/PopStompbox/blob/master/README.md#2-well-what-does-the-popstompbox-look-like)
+2. [Well, what does the PopStompbox look like ?](https://github.com/St4ckben/PopStompbox/blob/master/README.md#2-well-what-does-the-popstompbox-look-like-)
 3. [Basic usage](https://github.com/St4ckben/PopStompbox/blob/master/README.md#3-basic-usage)
-4. [How to change the onboarded sounds ?](https://github.com/St4ckben/PopStompbox/blob/master/README.md#4-how-to-change-the-onboarded-sounds)
-5. [How to build PopStompbox ?](https://github.com/St4ckben/PopStompbox/blob/master/README.md#5-how-to-build-popstompbox)
+4. [How to change the onboarded sounds ?](https://github.com/St4ckben/PopStompbox/blob/master/README.md#4-how-to-change-the-onboarded-sounds-)
+5. [How to build PopStompbox ?](https://github.com/St4ckben/PopStompbox/blob/master/README.md#5-how-to-build-popstompbox-)
 
 ## 1. Main features
 
