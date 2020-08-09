@@ -1,5 +1,5 @@
  /*
-  PopStompbox
+  StomPop
   created July 2020
   by St4ckben
 
