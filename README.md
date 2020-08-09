@@ -12,10 +12,11 @@ If you are in, follow me !
 
 ## Main features
 
-- Active (9V battery powered) or passive (acoustic) mode
+- Active (9V battery powered) or passive (unpowered) mode
 - Sound selection in active mode (persistent accross reboots)
 - Volume ajustment for both active and passive mode
 - Input 6.35mm jack for optional guitar pluging
+- Support of mono 8-bits 32000 Hz (best results achieved with 22050 Hz)
 
 ## Well, what's the PopStompbox ?
 
@@ -26,11 +27,24 @@ If you are in, follow me !
 PopStompbox can be used in several ways.
 
 The easiest way to use PopStombox is in passive mode. In such unpowered mode, the stompbox only needs do be plugged to an amplifier and that's it. 
-It consists in a piezoelectric microphone connected to the output jack as shown below (simplified scheme).  
+It consists in a piezoelectric microphone connected to the output jack as shown below (simplified scheme). The produced sound is the amplified sound of the foot hitting the wood box.
 
+<img src="https://raw.githubusercontent.com/St4ckben/PopStompbox/master/resources/passive_mode.png" width="500" title="Passive mode">
 
+The active mode, one the other hand, requires a 9V battery to work. Instead of hearing an amplified wooden sound, the piezoelectric microphone is only used as a sensor and the arduino is producing a numeric sound from a mono 8-bit wav file. 
+
+<img src="https://raw.githubusercontent.com/St4ckben/PopStompbox/master/resources/active_mode.png" width="500" title="Passive mode">
+
+**Switching from passive mode to active mode is done easily by powering on the PopStompbox.**
+An internal relay is diverting the electrical circuit towards the arduino microcontroller.
 
 ### How to plug my guitar and my amp ? 
+
+If the amplifier is equiped with several inputs, the guitar and the stompbox can be both plugged directly onto the amplifier as shown below.
+
+As the stompbox is equiped with an input 6.35mm jack, it is also possible to plug the guitar, the stompbox and the amp in series as shown below. The main advantage of this solution is that only one input is required on the amplifier. 
+
+
 
 ## How to update PopStompbox
 
