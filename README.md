@@ -23,6 +23,13 @@ If you are in, follow me !
 
 ### Active or passive mode
 
+PopStompbox can be used in several ways.
+
+The easiest way to use PopStombox is in passive mode. In such unpowered mode, the stompbox only needs do be plugged to an amplifier and that's it. 
+It consists in a piezoelectric microphone connected to the output jack as shown below (simplified scheme).  
+
+
+
 ### How to plug my guitar and my amp ? 
 
 ## How to update PopStompbox
