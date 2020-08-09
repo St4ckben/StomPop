@@ -21,7 +21,7 @@ If you are in, follow me !
 ## 1. Main features
 
 - Active (9V battery powered) or passive (unpowered) mode
-- Sound selection in active mode (persistent accross reboots)
+- Sound selection in active mode (persistent accross reboots as selected sound is stored in memory)
 - Volume ajustment for both active and passive mode
 - Input 6.35mm jack for optional guitar pluging
 - Support of mono 8-bits 32000 Hz (best results achieved with 22050 Hz)
@@ -68,10 +68,39 @@ As the stompbox is equiped with an input 6.35mm jack, it is also possible to plu
 6. Copy the new set of sounds on the Micro-SD card
 7. Eject the Micro-SD card and put it back on the Micro-SD card reader
 8. Close the stompbox case.
+9. Enjoy !
 
 ## 5. How to build PopStompbox ?
 
 ### You will need...
+
+This is the shop list of what I used, for some of them, they can be replaced by other references.
+
+- 1x (wooden) box (I did mine myself but you can use whatever you want to use)
+- 1x piezoelectric sensor
+- 1x Arduino Nano
+- 1x Micro-SD card reader for arduino
+- 1x 9V battery
+- 2x female 6.35mm jack adaptor
+- 1x normally-open monostable switch for sound selection
+- 1x bi-stable switch for power
+- 1x led 
+- 4x IN4007-like diodes
+- 1x 6.8 ohms resistor
+- 2x 220 ohms resistor
+- 1x 1K ohms resistor
+- 1x 5K ohms resistor
+- 2x 10K ohms resistor
+- 1x 55K ohms resistor
+- 1x 100K ohms resistor
+- 1x 3M ohms resistor
+- 1x 1M ohms linear potentiometer for volume
+- 1x Panasonic TQ2-5VDC DPDT relay
+- 2x 2N3904 transistor
+- 1x 100nF capacitor
+- 2x 1uF capacitor
+- 1x LM358N amplifier
+- Several wires
 
 ### Electronical wiring layout
 
