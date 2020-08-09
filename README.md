@@ -104,4 +104,4 @@ This is the shop list of what I used, for some of them, they can be replaced by 
 
 ### Electronical wiring layout
 
-
+![Electronic circuit](https://raw.githubusercontent.com/St4ckben/PopStompbox/master/resources/electronics.PNG)
