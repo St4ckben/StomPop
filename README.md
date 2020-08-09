@@ -58,6 +58,15 @@ As the stompbox is equiped with an input 6.35mm jack, it is also possible to plu
 
 ## 4. How to change the onboarded sounds ?
 
+1. Open the stompbox case and remove the Micro-SD card from the Micro-SD card reader.
+2. Connect the Micro-SD card to a computer
+3. Make a copy of the Micro-SD card content
+4. Format the Micro-SD card in FAT32 (formating will prevent bugs as shadow files can be seen by the arduino)
+5. Rename the new set of sounds by stricly following this convention : each filename must match the "SOUNDXXX.wav" pattern where XXX is the 3-digit number of the sound (i.e SOUND001.wav, SOUND002.wav, SOUND003.wav...). Moreover, the numbers must follow each other. If there is a file missing (i.e. SOUND001.wav, SOUND002.wav, SOUND005) then the arduino will come back to the first sound file and will never play the next ones (i.e. SOUND005.wav will never be played and the arduino will loop on 1 and 2 only).   
+6. Copy the new set of sounds on the Micro-SD card
+7. Eject the Micro-SD card and put it back on the Micro-SD card reader
+8. Close the stompbox case.
+
 ## 5. How to build PopStompbox ?
 
 ### You will need...
