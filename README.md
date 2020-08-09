@@ -58,6 +58,8 @@ As the stompbox is equiped with an input 6.35mm jack, it is also possible to plu
 
 ## 4. How to change the onboarded sounds ?
 
+**The sounds must be converted to mono unsigned 8-bit PCM 22050 Hz. Frequencies up to 32000Hz are supported but best results are achieved with 22050 Hz.**
+
 1. Open the stompbox case and remove the Micro-SD card from the Micro-SD card reader.
 2. Connect the Micro-SD card to a computer
 3. Make a copy of the Micro-SD card content
