@@ -10,7 +10,15 @@ Here, I am talking about the second one. Basically, I just want something to hit
 
 If you are in, follow me !
 
-## Main features
+## Table of contents
+
+1. Main features
+2. Well, what does the PopStompbox look like ?
+3. Basic usage
+4. How to update PopStompbox ?
+5. How to build PopStompbox ?
+
+## 1. Main features
 
 - Active (9V battery powered) or passive (unpowered) mode
 - Sound selection in active mode (persistent accross reboots)
@@ -18,9 +26,9 @@ If you are in, follow me !
 - Input 6.35mm jack for optional guitar pluging
 - Support of mono 8-bits 32000 Hz (best results achieved with 22050 Hz)
 
-## Well, what's the PopStompbox ?
+## 2. Well, what does the PopStompbox look like ?
 
-## Basic usage
+## 3. Basic usage
 
 ### Active or passive mode
 
@@ -33,7 +41,7 @@ It consists in a piezoelectric microphone connected to the output jack as shown 
 
 The active mode, one the other hand, requires a 9V battery to work. Instead of hearing an amplified wooden sound, the piezoelectric microphone is only used as a sensor and the arduino is producing a numeric sound from a mono 8-bit wav file. 
 
-<img src="https://raw.githubusercontent.com/St4ckben/PopStompbox/master/resources/active_mode.png" width="500" title="Passive mode">
+<img src="https://raw.githubusercontent.com/St4ckben/PopStompbox/master/resources/active_mode.png" width="500" title="Active mode">
 
 **Switching from passive mode to active mode is done easily by powering on the PopStompbox.**
 An internal relay is diverting the electrical circuit towards the arduino microcontroller.
@@ -42,17 +50,19 @@ An internal relay is diverting the electrical circuit towards the arduino microc
 
 If the amplifier is equiped with several inputs, the guitar and the stompbox can be both plugged directly onto the amplifier as shown below.
 
+<img src="https://raw.githubusercontent.com/St4ckben/PopStompbox/master/resources/parallel_plugging.png" width="450" title="Parallel plugging">
+
 As the stompbox is equiped with an input 6.35mm jack, it is also possible to plug the guitar, the stompbox and the amp in series as shown below. The main advantage of this solution is that only one input is required on the amplifier. 
 
+<img src="https://raw.githubusercontent.com/St4ckben/PopStompbox/master/resources/series_plugging.png" width="450" title="In-series plugging">
 
-
-## How to update PopStompbox
+## 4. How to update PopStompbox ?
 
 ### Update of the arduino code
 
 ### Change the onboarded sounds 
 
-## How to build PopStompbox
+## 5. How to build PopStompbox ?
 
 ### You will need...
 
