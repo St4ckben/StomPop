@@ -1,5 +1,5 @@
  /*
-  StomPop
+  PopStompbox
   created July 2020
   by St4ckben
 
@@ -24,12 +24,13 @@
 #define PIN_SPEAKER 10
 
 #define EEADDR 166
-#define PIEZO_THRESHOLD 20
+#define PIEZO_THRESHOLD 25
 #define TAP_REQUIRED_COUNT 3 // How many times the threshold must be consecutivly reached ?
 #define TAP_DELAY 80 // How much time should we wait until next tap ?
-#define VOLUME 2 // Must be 0 to 7
+#define DEFAULT_VOLUME 2 // Must be 0 to 7
+#define VOLUME_FILE "volumes.txt"
 
-// Sound selection vars
+// Sound vars
 int currentSound = 1;          // currently selected sound (the first one by default)
 File soundFile;                // The current opened sound file
 
@@ -40,6 +41,8 @@ TMRpcm audio;                  // Audio object
 int piezoValue = 0;            // Current piezo sensor value
 int previousPiezoValue = 0;    // Previous piezo sensor value
 int tapCounter = 0;            // Counter of continuous threshold detections
+int* volumes = 0;
+int volumesSize = 0;
 
 void setup() {
   if (DEBUG_ENABLED) {
@@ -49,6 +52,7 @@ void setup() {
   setupButton();
   setupSDCardReader();
   setupAudioPlayer();
+  loadVolumes();
   
   initSoundFile();  
 }
@@ -94,7 +98,6 @@ void setupSDCardReader() {
 void setupAudioPlayer() {
   DEBUG_PRINT("Initializing audio player...");
   audio.speakerPin = PIN_SPEAKER;
-  audio.setVolume(VOLUME);
   DEBUG_PRINTLN(" DONE.");
 }
 
@@ -108,9 +111,43 @@ void initSoundFile() {
     filename = generateFilename();
   }
   soundFile = SD.open(filename, FILE_READ);
+  setVolume();
   DEBUG_PRINT(" DONE (now using sound '");
   DEBUG_PRINT(soundFile.name());
   DEBUG_PRINTLN("').");
+}
+
+void loadVolumes() {
+  DEBUG_PRINT("Loading volumes...");
+  String buffer;
+  File volumeFile = SD.open(VOLUME_FILE, FILE_READ); // Opening the volume file
+  if (volumeFile) {
+    // First, calculate the number of lines to initialize the array later on
+    volumesSize = 0;
+    while (volumeFile.available()) {
+      buffer = volumeFile.readStringUntil('\n');
+      volumesSize++;      
+    }
+    volumeFile.close();
+    
+    // allocate size of volumes array
+    volumes = (int*) malloc(volumesSize * sizeof(int));
+    int counter = 0;
+    volumeFile = SD.open(VOLUME_FILE, FILE_READ); // Opening the volume file
+    if (volumeFile) {
+      while (volumeFile.available() && counter < volumesSize) {
+        buffer = volumeFile.readStringUntil('\n');
+        volumes[counter] = buffer.toInt();
+        if (volumes[counter] < 1 || volumes[counter] > 7) {
+          volumes[counter] = DEFAULT_VOLUME;
+        }
+        counter++;      
+      }
+      volumeFile.close();
+    }
+  }
+  DEBUG_PRINTLN(" DONE.");
+  return volumes;
 }
 
 // Audio control methods
@@ -154,12 +191,26 @@ void changeSound() {
     }
     soundFile = SD.open(filename, FILE_READ);
   }
+  setVolume();
   blinkLed();
   EEPROM.put(EEADDR,currentSound); // Save the current choice to EEPROM
   DEBUG_PRINT("Now using sound '");
   DEBUG_PRINT(soundFile.name());
   DEBUG_PRINTLN("'.");
 }
+
+void setVolume() {
+  DEBUG_PRINT("Setting volume...");
+  int volume = DEFAULT_VOLUME;
+  if (currentSound <= volumesSize) {
+    volume = volumes[currentSound-1];
+  }
+  audio.setVolume(volume);
+  DEBUG_PRINT("Now using volume ");
+  DEBUG_PRINT(volume);
+  DEBUG_PRINTLN(" DONE.");
+}
+
 
 // IHM methods
 //////////////////////////
