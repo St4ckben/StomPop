@@ -28,6 +28,8 @@ You are in ? Cool. Follow me !
 
 ## 2. Well, what does the StomPop look like ?
 
+| <img src="https://raw.githubusercontent.com/St4ckben/StomPop/master/resources/stompop1.jpg" width="300" title="Stompop1"> | <img src="https://raw.githubusercontent.com/St4ckben/StomPop/master/resources/stompop2.jpg" width="300" title="Stompop2"> | <img src="https://raw.githubusercontent.com/St4ckben/StomPop/master/resources/stompop3.jpg" width="300" title="Stompop3"> |
+
 ## 3. Basic usage
 
 ### Active or passive mode
@@ -67,11 +69,9 @@ As the stompbox is equiped with an input 6.35mm jack, it is also possible to plu
 5. Rename the new set of sounds by stricly following this convention : each filename must match the "SOUNDXXX.wav" pattern where XXX is the 3-digit number of the sound (i.e SOUND001.wav, SOUND002.wav, SOUND003.wav...). Moreover, the numbers must follow each other. If there is a file missing (i.e. SOUND001.wav, SOUND002.wav, SOUND005) then the arduino will come back to the first sound file and will never play the next ones (i.e. SOUND005.wav will never be played and the arduino will loop on 1 and 2 only).   
 6. Copy the new set of sounds on the Micro-SD card
 7. Edit the volumes.txt file and update values to match new set of sounds. This file must only contain 1 to 6 numbers where 1 is a very low volume and 6 is the highest volume. The first line matches the first sound, the second line matches the second sound and so on. The purpose of this file is to obtain homogeneous volume while switching accross sounds. A good idea is to start with a value of 3 for all sounds, and if one sound is lower or higher than the others, ajust the value for this specific sound. As an example, if the set of sounds is composed of 3 sounds, the following content can be found in volumes.txt. 
-> 3
-
-> 4
-
-> 3
+> 3  
+> 4  
+> 3  
 8. Eject the Micro-SD card and put it back on the Micro-SD card reader
 9. Close the stompbox case.
 10. Enjoy !
